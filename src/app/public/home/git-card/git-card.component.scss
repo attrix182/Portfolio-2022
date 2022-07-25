@@ -1,0 +1,17 @@
+.btn {
+    margin-top: 35px;
+    color: #000000;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background: black;
+    box-shadow: inset 0 0 0 0 #020202;
+    border-color: #000000;
+}
+
+.btn:first-child {
+    margin-right: 10px;
+}
