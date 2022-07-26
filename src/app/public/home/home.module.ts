@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { GitCardComponent } from './git-card/git-card.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     HomeComponent,

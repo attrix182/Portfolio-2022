@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCollapseModule
+    MdbCollapseModule,
+    MdbDropdownModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],

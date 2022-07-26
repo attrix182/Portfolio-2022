@@ -1,7 +1,6 @@
 a {
-    color: white !important;
     font-size: 1.3em;
-   
+  
 }
 
 i{
@@ -11,4 +10,10 @@ i{
 nav{
     background-color: #123f54 !important;
     z-index: 1;
+}
+
+
+.nav-link{
+    cursor: pointer;
+    user-select: none;
 }
