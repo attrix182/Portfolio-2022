@@ -1,8 +1,10 @@
 @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+/* 
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+ */
 
 // MDB SCSS
 @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
@@ -14,4 +16,17 @@ body{
 
 .a-enter-vr-button{
     display: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: #04131a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #123f54;
 }
