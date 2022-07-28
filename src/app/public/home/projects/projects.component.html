@@ -1,13 +1,13 @@
 <div class="title-section text-center"><h3>Proyectos</h3></div>
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2 text-center" style="margin:auto;width: 97vw;">
 
   <div *ngFor="let project of projects">
-    <div class="col card-hold">
+    <div class="col card-hold" data-aos="fade-up">
       <div class="card h-100">
         <img
-          src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+          src="{{project.image}}"
           class="card-img-top"
-          alt="Hollywood Sign on The Hill"
+          alt="{{project.name}}"
         />
         <article class="card-body">
           <h5 class="card-title">{{project.name}}</h5>

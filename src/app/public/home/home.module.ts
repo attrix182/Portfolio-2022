@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from 'src/app/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     AboutMeComponent,
     ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

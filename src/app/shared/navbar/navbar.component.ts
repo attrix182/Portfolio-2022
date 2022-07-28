@@ -17,13 +17,11 @@ export class NavbarComponent implements OnInit {
       { name: 'Home', link: 'home' },
       { name: 'About me', link: 'about' },
       { name: 'Projects', link: 'projects' },
-      { name: 'Blog', link: 'blog' },
     ];
     this.navbarButtons_ES = [
       { name: 'Inicio', link: 'home' },
       { name: 'Sobre mí', link: 'about' },
       { name: 'Proyectos', link: 'projects' },
-      { name: 'Blog', link: 'blog' },
     ];
   }
 
