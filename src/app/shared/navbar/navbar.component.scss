@@ -1,6 +1,11 @@
 a {
     font-size: 1.3em;
+    color: white !important;
   
+}
+
+a:hover {
+    color: #9dd1e6 !important;
 }
 
 i{
@@ -10,6 +15,18 @@ i{
 nav{
     background-color: #123f54 !important;
     z-index: 1;
+  
+    width: 100%;
+}
+
+.nav-sticky {
+    position: fixed;
+    width: 100%;
+}
+
+.dropdown-item{
+    color: black !important;
+    cursor: pointer;
 }
 
 

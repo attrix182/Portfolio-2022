@@ -7,6 +7,7 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MdbCollapseModule,
     MdbDropdownModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -14,18 +14,16 @@ export class NavbarComponent implements OnInit {
 
   constructor(private langSVC: LangService, private location: Location) {
     this.navbarButtons_EN = [
-      { name: 'Home', link: '/home' },
-      { name: 'About', link: '/about' },
-      { name: 'Projects', link: '/projects' },
-      { name: 'Blog', link: '/blog' },
-      { name: 'Contact', link: '/contact' }
+      { name: 'Home', link: 'home' },
+      { name: 'About me', link: 'about' },
+      { name: 'Projects', link: 'projects' },
+      { name: 'Blog', link: 'blog' },
     ];
     this.navbarButtons_ES = [
-      { name: 'Inicio', link: '/home' },
-      { name: 'Sobre mí', link: '/about' },
-      { name: 'Proyectos', link: '/projects' },
-      { name: 'Blog', link: '/blog' },
-      { name: 'Contacto', link: '/contact' }
+      { name: 'Inicio', link: 'home' },
+      { name: 'Sobre mí', link: 'about' },
+      { name: 'Proyectos', link: 'projects' },
+      { name: 'Blog', link: 'blog' },
     ];
   }
 
@@ -60,8 +58,27 @@ export class NavbarComponent implements OnInit {
     this.changeFlag();
   }
 
-  goTo(page:string){
+  onWindowScroll(event: any) {
+    let element = document.querySelector('.navbar') as HTMLElement;
+    let scrollTop = event.srcElement.children[0].scrollTop;
+   
+
+    if (scrollTop > 0) {
+      element.classList.add('nav-sticky');
+    } else {
+      element.classList.remove('nav-sticky');
+    }
+  }
+
+  setActive(){
+    let path = this.location.path();
+    let pathArray = path.split('/');
+    let active = pathArray[1];
+    console.log(active);
+  }
+
+/*   goTo(page:string){
     console.log(page);
     this.location.replaceState(page);
-  }
+  } */
 }

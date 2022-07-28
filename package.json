@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod":"ng  build --aot --prod --output-hashing none",
+    "build:prod": "ng  build --aot --prod --output-hashing none",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -25,6 +25,8 @@
     "@popperjs/core": "^2.10.2",
     "aos": "^2.3.4",
     "mdb-angular-ui-kit": "^1.6.1",
+    "ngx-page-scroll": "~7.0.5",
+    "ngx-page-scroll-core": "^7.0.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

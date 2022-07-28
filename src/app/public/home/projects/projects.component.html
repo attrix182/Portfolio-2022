@@ -1,0 +1,25 @@
+<div class="title-section text-center"><h3>Proyectos</h3></div>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+
+  <div *ngFor="let project of projects">
+    <div class="col card-hold">
+      <div class="card h-100">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+          class="card-img-top"
+          alt="Hollywood Sign on The Hill"
+        />
+        <article class="card-body">
+          <h5 class="card-title">{{project.name}}</h5>
+          <p class="card-text">
+            {{project.description}}
+          </p>
+          <section class="container-buttons">
+            <a target="_blank" href="{{project.linkDemo}}" class="btn btn-dark">Demo</a>
+            <a target="_blank" href="{{project.linkRepo}}" class="btn btn-dark">Repo</a>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

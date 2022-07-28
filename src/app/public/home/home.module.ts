@@ -5,14 +5,16 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import {MdbCarouselModule} from 'mdb-angular-ui-kit/carousel';
 import { HeaderComponent } from './header/header.component';
-import { GitCardComponent } from './git-card/git-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
-    GitCardComponent,
+    AboutMeComponent,
+    ProjectsComponent,
   ],
   imports: [
     CommonModule,

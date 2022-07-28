@@ -1,0 +1,32 @@
+.left {
+  display: flex;
+  justify-content: start;
+}
+
+.card {
+  
+  margin-top: -45px;
+  margin: auto;
+}
+
+a {
+    margin: 3px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .card {
+    margin-top: -45px;
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        margin-top: -45px;
+      width: 600px;
+    }
+  }
+    
+

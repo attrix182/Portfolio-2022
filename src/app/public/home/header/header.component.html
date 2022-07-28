@@ -4,7 +4,8 @@
       <div class="col-sm-12 col-md-6">
         <div class="hero-content">
           <div class="hero-text" data-aos="fade-right">
-            <p>Soy</p>
+            <p *ngIf="lang == 'es'">Soy</p>
+            <p *ngIf="lang == 'en'">I am</p>
             <h1>Luciano Sinisterra</h1>
 
             <div data-aos="fade-right">
@@ -17,9 +18,9 @@
               target="_blank"
               download
               href="https://drive.google.com/file/d/1eLt-cvRD_par698JdlCLSoKjOOKR4Azx/view?usp=sharing"
-              >Descargar CV</a
+              >{{btn_cv}}</a
             >
-            <a class="btn" href="mailto:contact@sinisterraluciano.com.ar">Contactame</a>
+            <a class="btn" href="mailto:contact@sinisterraluciano.com.ar">{{btn_contact}}</a>
           </div>
         </div>
       </div>

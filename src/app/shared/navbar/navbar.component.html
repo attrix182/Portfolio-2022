@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" (window:scroll)="onWindowScroll($event)">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -17,24 +17,17 @@
       mdbCollapse
       #centered="mdbCollapse"
     >
-      <img src="../../../favicon.ico" alt="lsLogo" class="p-2" />
+      <a pageScroll href="#home"><img src="../../../favicon.ico" alt="lsLogo" class="p-2" /></a>
       <ul class="navbar-nav mb-2 mb-lg-0">
         <div *ngFor="let item of navbarButtons">
           <li class="nav-item">
-            <a class="nav-link active"  (click)="goTo(item.link)" >{{ item.name }}</a>
+            <a pageScroll href="#{{ item.link }}" class="nav-link">{{ item.name }}</a>
           </li>
         </div>
 
         <li mdbDropdown class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            id="navbarDropdown"
-            role="button"
-            mdbDropdownToggle
-            aria-expanded="false"
-          >
-          <i [ngClass]="selectFlag" class="flag m-0"></i>
-        
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" mdbDropdownToggle aria-expanded="false">
+            <i [ngClass]="selectFlag" class="flag m-0"></i>
           </a>
           <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
