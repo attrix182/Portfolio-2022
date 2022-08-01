@@ -6,6 +6,9 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     AppRoutingModule,
     MdbCollapseModule,
     MdbDropdownModule,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,   
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent],

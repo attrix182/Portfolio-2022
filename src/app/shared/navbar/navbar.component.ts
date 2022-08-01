@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LangService } from '../services/lang.service';
 import { Location } from '@angular/common';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,8 +13,17 @@ export class NavbarComponent implements OnInit {
   navbarButtons_ES: any;
   navbarButtons: any;
   selectFlag: string = '';
+  actualRoute:string;
 
-  constructor(private langSVC: LangService, private location: Location) {
+  public section: string;
+
+
+  constructor(private langSVC: LangService, private location: Location, private router: Router) {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      this.section = this.router.url.split('/')[1];
+      console.log(this.section);
+    });
+  
     this.navbarButtons_EN = [
       { name: 'Home', link: 'home' },
       { name: 'About me', link: 'about' },
@@ -31,6 +42,7 @@ export class NavbarComponent implements OnInit {
       this.selectFlag = lang;
       this.changeFlag();
     });
+
   }
 
   changeFlag() {

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" (window:scroll)="onWindowScroll($event)">
+<nav *ngIf="section == ''" class="navbar navbar-expand-lg navbar-dark bg-dark" (window:scroll)="onWindowScroll($event)">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
