@@ -7,6 +7,7 @@ import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AngularFireModule } from '@angular/fire';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { environment } from 'src/environments/environment';
 
 
@@ -20,7 +21,8 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     MdbCollapseModule,
     MdbDropdownModule,
-    BrowserAnimationsModule,   
+    MdbScrollspyModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],

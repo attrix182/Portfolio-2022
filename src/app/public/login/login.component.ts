@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertService } from 'src/app/services/alert.service';
 import { AuthService } from 'src/app/services/auth.service';
@@ -13,11 +13,11 @@ import { FormValidationAbstract } from 'src/app/shared/form-validation-abstract'
 export class LoginComponent  extends FormValidationAbstract implements OnInit {
 
   public user: any = {};
-  public formGroup: FormGroup;
+  public formGroup: UntypedFormGroup;
 
 
   constructor(
-    private FB: FormBuilder,
+    private FB: UntypedFormBuilder,
     private router: Router,
     private authSVC:AuthService,
     private alertSVC: AlertService
@@ -36,11 +36,11 @@ export class LoginComponent  extends FormValidationAbstract implements OnInit {
 
   initForm() {
     this.formGroup = this.FB.group({
-      email: new FormControl('', [
+      email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
       ]),
-      password: new FormControl('', [
+      password: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(6),
       ]),
