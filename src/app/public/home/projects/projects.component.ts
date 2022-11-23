@@ -18,11 +18,11 @@ export class ProjectsComponent implements OnInit {
       image: '../../../../assets/img/salaDeJuegos.webp'
     },
     {
-      name: 'Clinica online',
-      description: 'Consiste en un web con registro/login, gestion de turnos, especialistas y especialidades',
-      linkDemo: 'https://clinicaonlinetp.web.app/seccionUsuarios',
-      linkRepo: 'https://github.com/attrix182/tpClinicaOnlineLab4',
-      image: '../../../../assets/img/Clinica.webp'
+      name: 'Feedbackcito',
+      description: 'Este proyecto consiste en un web para crear sesiones de feedback. A las cuales se puede acceder por un codigo QR ',
+      linkDemo: 'https://feedbackcito.com.ar',
+      linkRepo: 'https://github.com/attrix182/feedbackcito',
+      image: '../../../../assets/img/feedbackcito.webp'
     },
     {
       name: 'Stylefy',
@@ -43,12 +43,11 @@ export class ProjectsComponent implements OnInit {
       image: '../../../../assets/img/salaDeJuegos.webp'
     },
     {
-      name: 'Online clinic',
-      description:
-        'This project consists in a web with registration/login, management of appointments, specialists and specialties',
-      linkDemo: 'https://clinicaonlinetp.web.app/seccionUsuarios',
-      linkRepo: 'https://github.com/attrix182/tpClinicaOnlineLab4',
-      image: '../../../../assets/img/Clinica.webp'
+      name: 'Feedbackcito',
+      description: 'This project consists in a web to create feedback sessions. To which you can access by a QR code',
+      linkDemo: 'https://feedbackcito.com.ar',
+      linkRepo: 'https://github.com/attrix182/feedbackcito',
+      image: '../../../../assets/img/feedbackcito.webp'
     },
     {
       name: 'Stylefy',
