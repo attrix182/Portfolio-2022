@@ -9,7 +9,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AngularFireModule } from '@angular/fire';
 import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { environment } from 'src/environments/environment';
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { environment } from 'src/environments/environment';
     MdbDropdownModule,
     MdbScrollspyModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent],

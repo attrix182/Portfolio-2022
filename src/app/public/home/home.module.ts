@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from 'src/app/shared/footer/footer.component';
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -22,7 +22,8 @@ import { FooterComponent } from 'src/app/shared/footer/footer.component';
     CommonModule,
     HomeRoutingModule,
     MdbCarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

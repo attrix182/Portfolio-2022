@@ -7,9 +7,6 @@ import { LangService } from 'src/app/shared/services/lang.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  showDesktop = true;
-  showFolder= false;
-
   lang: string = 'es';
   projects: any;
   projects_es = [
@@ -62,7 +59,7 @@ export class ProjectsComponent implements OnInit {
   ];
 
   constructor(private langSVC: LangService) {}
-  dragPosition = {x: 0, y: 0};
+
   ngOnInit(): void {
     this.getLang();
     this.setLangProjects();
@@ -84,10 +81,5 @@ export class ProjectsComponent implements OnInit {
       this.lang = lang;
       this.setLangProjects();
     });
-  }
-
-  openFolder(){
-    this.showFolder = true;
-    this.showDesktop = false;
   }
 }

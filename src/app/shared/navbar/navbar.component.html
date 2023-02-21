@@ -24,21 +24,21 @@
             <a pageScroll href="#{{ item.link }}" class="nav-link">{{ item.name }}</a>
           </li>
         </div>
-
-        <li mdbDropdown class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" mdbDropdownToggle aria-expanded="false">
-            <i [ngClass]="selectFlag" class="flag m-0"></i>
-          </a>
-          <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" (click)="setLang('es')"><i class="flag-spain flag"></i>Español</a>
-            </li>
-            <li>
-              <a class="dropdown-item" (click)="setLang('en')"><i class="flag-united-kingdom flag"></i>English</a>
-            </li>
-          </ul>
-        </li>
       </ul>
+
+      <div mdbDropdown class="nav-item dropdown" class="test">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" mdbDropdownToggle aria-expanded="false">
+          <i [ngClass]="selectFlag" class="flag m-0"></i>
+        </a>
+        <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" (click)="setLang('es')"><i class="flag-spain flag"></i>Español</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="setLang('en')"><i class="flag-united-kingdom flag"></i>English</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
