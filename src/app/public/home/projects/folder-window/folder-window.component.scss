@@ -1,0 +1,69 @@
+.folder-open {
+  background-image: url('../../../../../assets/img/folder-open.webp');
+  background-size: cover;
+  position: absolute;
+  top: 5%;
+  width: 95%;
+  height: 90%;
+  left: 3%;
+  z-index: 10;
+  color: white;
+
+  .folder-name{
+    position: absolute;
+    top: 1.5%;
+    left: 16%;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px rgb(38 37 37 / 83%);
+    background: #343536;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+.close-folder {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+button:focus {
+  border: 1px solid rgb(90, 82, 82);
+  p {
+    background-color: rgba(0, 105, 197, 0.861);
+  }
+}
+
+.folder {
+  z-index: 1;
+  width: 100%;
+  cursor: pointer;
+  .img-cotainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 6vw;
+    }
+  }
+  p {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px rgba(38, 37, 37, 0.831);
+    font-size: 0.8em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+

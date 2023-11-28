@@ -1,0 +1,17 @@
+<section>
+  <div class="folder-open">
+    <button class="close-folder" (click)="close()">&nbsp;&nbsp;</button>
+    <h6 class="folder-name">{{ category }}</h6>
+
+    <div *ngFor="let p of projects">
+      <div cdkDragBoundary=".folder-open" cdkDrag>
+        <button class="folder">
+          <div class="img-cotainer">
+            <img src="assets/img/mac-folder.webp" alt="" />
+          </div>
+          <p>{{ p }}</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

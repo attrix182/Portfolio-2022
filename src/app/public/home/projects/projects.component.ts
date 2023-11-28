@@ -8,61 +8,17 @@ import { LangService } from 'src/app/shared/services/lang.service';
 })
 export class ProjectsComponent implements OnInit {
   showDesktop = true;
-  showFolder= false;
+  time: any = new Date().toLocaleTimeString('es-AR', { hour12: false, hour: 'numeric', minute: 'numeric' });
 
   lang: string = 'es';
   projects: any;
-  projects_es = [
-    {
-      name: 'Sala de juegos',
-      description: 'Este proyecto consiste en un web con registro/login, varios minijuegos y un control de score',
-      linkDemo: 'https://tpsaladejuegosutn.web.app/',
-      linkRepo: 'https://github.com/attrix182/salaDeJuegosLAB4',
-      image: '../../../../assets/img/salaDeJuegos.webp'
-    },
-    {
-      name: 'Feedbackcito',
-      description: 'Este proyecto consiste en un web para crear sesiones de feedback. A las cuales se puede acceder por un codigo QR ',
-      linkDemo: 'https://feedbackcito.com.ar',
-      linkRepo: 'https://github.com/attrix182/feedbackcito',
-      image: '../../../../assets/img/feedbackcito.webp'
-    },
-    {
-      name: 'Stylefy',
-      description:
-        'Este proyecto consiste en mi propia biblioteca de estilos, para agilizar la construcción de nuevos proyectos',
-      linkDemo: 'https://stylefy.netlify.app/',
-      linkRepo: 'https://github.com/attrix182/stylefy',
-      image: '../../../../assets/img/stylefy.webp'
-    }
-  ];
+  categories: string[];
+  categories_es:string[] = ['Aplicaciones', 'Challenges', 'Clones']
+  categories_en:string[] = ['Applications', 'Challenges', 'Clones']
 
-  projects_en = [
-    {
-      name: 'Game Room',
-      description: 'This project consists in a web with registration/login, several games and a control of score',
-      linkDemo: 'https://tpsaladejuegosutn.web.app/',
-      linkRepo: 'https://github.com/attrix182/salaDeJuegosLAB4',
-      image: '../../../../assets/img/salaDeJuegos.webp'
-    },
-    {
-      name: 'Feedbackcito',
-      description: 'This project consists in a web to create feedback sessions. To which you can access by a QR code',
-      linkDemo: 'https://feedbackcito.com.ar',
-      linkRepo: 'https://github.com/attrix182/feedbackcito',
-      image: '../../../../assets/img/feedbackcito.webp'
-    },
-    {
-      name: 'Stylefy',
-      description: 'This project consists in my own library of styles, to simplify the construction of new projects',
-      linkDemo: 'https://stylefy.netlify.app/',
-      linkRepo: 'https://github.com/attrix182/stylefy',
-      image: '../../../../assets/img/stylefy.webp'
-    }
-  ];
 
   constructor(private langSVC: LangService) {}
-  dragPosition = {x: 0, y: 0};
+  dragPosition = { x: 0, y: 0 };
   ngOnInit(): void {
     this.getLang();
     this.setLangProjects();
@@ -71,10 +27,10 @@ export class ProjectsComponent implements OnInit {
   setLangProjects() {
     switch (this.lang) {
       case 'es':
-        this.projects = this.projects_es;
+        this.categories = this.categories_es;
         break;
       case 'en':
-        this.projects = this.projects_en;
+        this.categories = this.categories_en;
         break;
     }
   }
@@ -84,10 +40,5 @@ export class ProjectsComponent implements OnInit {
       this.lang = lang;
       this.setLangProjects();
     });
-  }
-
-  openFolder(){
-    this.showFolder = true;
-    this.showDesktop = false;
   }
 }

@@ -10,13 +10,17 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { FolderItemComponent } from './projects/folder-item/folder-item.component';
+import { FolderWindowComponent } from './projects/folder-window/folder-window.component';
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
     AboutMeComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    FolderItemComponent,
+    FolderWindowComponent
   ],
   imports: [
     CommonModule,

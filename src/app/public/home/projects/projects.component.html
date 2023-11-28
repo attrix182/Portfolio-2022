@@ -3,32 +3,15 @@
     <img class="img-frame" src="assets/img/macbook-frame.webp" alt="" />
 
     <section class="screen">
-
       <div class="screen-content" *ngIf="showDesktop">
         <section class="desktop">
-          <div class="desktop-folder" *ngFor="let project of projects">
+          <h6 class="time">{{ time }}</h6>
 
-            <div cdkDragBoundary=".screen" cdkDrag>
-              <button class="folder" (click)="openFolder()">
-                <div class="img-cotainer">
-                  <img src="assets/img/mac-folder.webp" alt="" />
-                </div>
-                <p>{{ project.name }}</p>
-              </button>
-            </div>
-
+          <div class="desktop-folder" *ngFor="let category of categories">
+            <app-folder-item [category]="category"></app-folder-item>
           </div>
         </section>
       </div>
-
-
-      <section *ngIf="showFolder">
-        <div class="folder-open">
-
-        </div>
-      </section>
-
-
     </section>
   </div>
 </section>

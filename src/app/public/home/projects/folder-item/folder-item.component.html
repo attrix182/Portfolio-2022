@@ -1,0 +1,14 @@
+<div cdkDragBoundary=".screen" cdkDrag>
+  <button class="folder" (dblclick)="openFolder()">
+    <div class="img-cotainer">
+      <img src="assets/img/mac-folder.webp" alt="" />
+    </div>
+    <p>{{ category }}</p>
+  </button>
+</div>
+
+<app-folder-window
+*ngIf="showFolder"
+(closeFolder)="showFolder = false"
+[category]="category"
+></app-folder-window>
